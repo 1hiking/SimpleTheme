@@ -14,22 +14,23 @@ body {
     color: var(--text-color);
 }
 
-header {
+/* Top page elements */
+header, nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-weight: bold;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
+/* Titles */
 
 h1, h2 {
     font-family: var(--font-family);
     font-size: var(--font-title);
+    margin: 10px 10px;
 }
+
+/* Text */
 
 p, a, li {
     font-family: var(--font-family);
@@ -38,12 +39,26 @@ p, a, li {
     text-decoration: none;
 }
 
+blockquote {
+    font-style: italic;
+}
+
+/* Any type of clickable link */
+
 a:any-link {
     color: var(--text-visit);
 }
 
 a:hover {
     color: var(--text-hover);
+}
+
+.container > footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #2E3440;
+    border-radius: 35px;
 }
 
 @media (prefers-color-scheme: light) {
