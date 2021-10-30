@@ -1,5 +1,6 @@
 :root {
     --background-color: #3B4252;
+    --boxed-background: #2E3440;
     --text-color:#E5E9F0;
     --text-visit: #88C0D0;
     --text-hover: #8FBCBB;
@@ -29,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family);
     font-size: var(--font-title);
     line-height: 1.25;
-    margin: 10px 10px;
+    /* margin: 10px 10px; */
 }
 
 /* Text */
@@ -41,8 +42,15 @@ p, a, li {
     text-decoration: none;
 }
 
+/* Avoid weird spaces when a link is nested inside a paragraph */
+p > a {
+    margin: auto;
+}
+
 blockquote {
     font-style: italic;
+    background-color: var(--boxed-background);
+    border-radius: 15px;
 }
 
 /* Any type of clickable link */
@@ -59,7 +67,7 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: #2E3440;
+    background-color: var(--boxed-background);
     border-radius: 35px;
 }
 
@@ -72,6 +80,7 @@ a:hover {
 @media (prefers-color-scheme: light) {
     :root {
         --background-color: #D8DEE9;
+        --boxed-background: #ECEFF4;
         --text-color:#2E3440;
         --text-visit: #5E81AC;
         --text-hover: #88C0D0;
