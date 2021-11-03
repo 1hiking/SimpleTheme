@@ -1,5 +1,6 @@
 {{ define "main" }}
-    {{ range .Site.RegularPages }}
+    <div class="IndexList">
+    {{ range .Paginator.Pages }}
         <article>
             <h2>
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
@@ -7,4 +8,5 @@
             <p>{{ .Summary }}</p>
         </article>
     {{ end }}
+    </div>
 {{ end }}
