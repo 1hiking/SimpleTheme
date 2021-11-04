@@ -1,7 +1,9 @@
 {{ define "main" }}
 <article>
     <h2>{{.Title}}</h2>
-
+    <aside>
+        {{.TableOfContents}}
+    </aside>
     {{.Content}}
 </article>
 {{ end }}
