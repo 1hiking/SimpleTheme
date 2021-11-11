@@ -2,11 +2,11 @@
 
 <article>
     <h2>{{ .Title }}</h2>
-    <b>{{ .Content }}</b>
+    <p>{{ .Content }}</p>
 </article>
 {{ range .Site.Menus.main }}
     {{ if .HasChildren }}
-        <b>bb</b>
+        <p>bb</b>
     {{end}}
 {{ end }}
 <!--     <div class="IndexList">
