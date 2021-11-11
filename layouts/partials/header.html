@@ -1,5 +1,5 @@
 <header>
-    <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Params.logoalt }}">
+    <img src="{{ .Site.Params.logo | safeHTML }}" alt="{{ .Site.Params.logoalt }}">
     <a href="/">
         <h1>{{ .Site.Title }}</h1>
     </a>

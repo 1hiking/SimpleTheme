@@ -8,6 +8,8 @@
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'Microsoft YaHei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji';
     --font-title:20px;
     --font-body:14px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 body {
@@ -32,12 +34,20 @@ header > a > h1 {
 
 /* Article elements */
 
-article > h2, h3, h4, h5, h6 {
+article > h1 {
+    text-align: center;
+}
+
+article > h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-title-weight);
     font-family: var(--font-family);
     font-size: var(--font-title);
     line-height: 1.25;
     margin-left: 10px;
+}
+
+.author-date > p {
+    text-align: center;
 }
 
 article > p, a, li {
@@ -50,6 +60,7 @@ article > p, a, li {
 /* Table of contents */
 
 nav#TableOfContents {
+    display: flex;
     float: right;
 
 }

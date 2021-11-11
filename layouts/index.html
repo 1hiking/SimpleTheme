@@ -1,12 +1,22 @@
 {{ define "main" }}
-    <div class="IndexList">
+
+<article>
+    <h2>{{ .Title }}</h2>
+    <b>{{ .Content }}</b>
+</article>
+{{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+        <b>bb</b>
+    {{end}}
+{{ end }}
+<!--     <div class="IndexList">
     {{ range .Paginator.Pages }}
-        <article>
+        <summary>
             <h2>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                <a href="{{ .Permalink }}">{{ .Title }}</a> 
             </h2>
             <p>{{ .Summary }}</p>
-        </article>
+        </summary>
     {{ end }}
-    </div>
+    </div> -->
 {{ end }}
