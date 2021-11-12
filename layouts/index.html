@@ -1,22 +1,11 @@
 {{ define "main" }}
 
 <article>
-    <h2>{{ .Title }}</h2>
-    <p>{{ .Content }}</p>
+    <div class="article-header">
+        <h1>{{ .Title }}</h1>
+    </div>
+    <div class="article-content">
+        <p>{{ .Content }}</p>
+    </div>
 </article>
-{{ range .Site.Menus.main }}
-    {{ if .HasChildren }}
-        <p>bb</b>
-    {{end}}
-{{ end }}
-<!--     <div class="IndexList">
-    {{ range .Paginator.Pages }}
-        <summary>
-            <h2>
-                <a href="{{ .Permalink }}">{{ .Title }}</a> 
-            </h2>
-            <p>{{ .Summary }}</p>
-        </summary>
-    {{ end }}
-    </div> -->
 {{ end }}

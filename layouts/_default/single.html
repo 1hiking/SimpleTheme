@@ -2,17 +2,18 @@
 {{$date := time.Format .Site.Params.dateFormat .Date }}
 
 <article>
-    <h1>{{.Title}}</h1>
-    <span class="author-date">
-        {{ with .Site.Author.name }}
-        <p>By {{ . }} ·
-            {{ end }}
-            <time>{{ $date }}</time>
-        </p>
-    </span>
-    <aside>
-        {{.TableOfContents}}
-    </aside>
-    {{.Content}}
+    <div class="article-header">
+        <h1>{{.Title}}</h1>
+        <span class="author-date">
+            {{ with .Site.Author.name }}
+            <p>By {{ . }} ·
+                {{ end }}
+                <time>{{ $date }}</time>
+            </p>
+        </span>
+    </div>
+    <div class="article-content">
+        {{.Content}}
+    </div>
 </article>
 {{ end }}

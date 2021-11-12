@@ -1,21 +1,21 @@
 <head>
-    {{/*    https://gohugo.io/variables/page/ */}}
-    
+    {{/* https://gohugo.io/variables/page/ */}}
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy"
-        content="img-src 'self'; default-src 'self'; style-src 'self'; script-src 'self'; form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; base-uri 'none'">  
-    {{ if .IsPage }}    
-        <meta property="og:title" content="{{.Site.Title}} | {{ .Title }}">
-        {{ with .Site.Author.name }}
-        <meta property="og:author" content="{{ . }}">
-        {{ end }}
+        content="img-src 'self'; default-src 'self'; style-src 'self'; script-src 'self'; form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; base-uri 'none'">
+    {{ if .IsPage }}
+    <meta property="og:title" content="{{.Site.Title}} | {{ .Title }}">
+    {{ with .Site.Author.name }}
+    <meta property="og:author" content="{{ . }}">
+    {{ end }}
     {{ else }}
-        <meta property="og:title" content="{{.Site.Title}}">
+    <meta property="og:title" content="{{.Site.Title}}">
     {{ end }}
     <meta property="og:url" content={{ .Permalink }}>
     <title>{{.Site.Title}}</title>
-    <link rel="stylesheet" href="{{"css/style.css" | relURL}}">
+    <link rel="stylesheet" href="{{" css/style.css" | relURL}}">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">

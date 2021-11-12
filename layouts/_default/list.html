@@ -3,10 +3,12 @@
     <h2>{{.Title}}</h2>
     {{ .Content }}
 
-    <ul>
+    <div class="list-items">
         {{range.Pages}}
-        <li> <a href="{{.RelPermalink}}"> {{.Title}}</a> </li>
+        <span> <a href="{{.RelPermalink}}"> {{.Title}}</a>
+            <p>{{ .Description }}</p>
+        </span>
         {{end}}
-    </ul>
+    </div>
 </div>
 {{ end }}
