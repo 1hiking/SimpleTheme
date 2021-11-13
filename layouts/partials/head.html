@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Security-Policy"
-        content="img-src 'self'; default-src 'self'; style-src 'self'; script-src 'self'; form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; base-uri 'none'">
+        content="form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; base-uri 'none'">
     {{ if .IsPage }}
     <meta property="og:title" content="{{.Site.Title}} | {{ .Title }}">
+    <meta property="og:description" content="{{ .Description }}">
+    <meta name="description" content="{{ .Description }}">
     {{ with .Site.Author.name }}
     <meta property="og:author" content="{{ . }}">
     {{ end }}
