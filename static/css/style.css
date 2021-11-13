@@ -12,6 +12,7 @@
     --font-body: medium;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 0;
 }
 
 body {
@@ -111,6 +112,8 @@ nav#TableOfContents > ul {
 .list-items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
     justify-items: center;
     text-align: center;
 }
