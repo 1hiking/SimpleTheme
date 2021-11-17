@@ -4,7 +4,7 @@ A simple theme using the Nord palette (for the most part).
 
 ## Theme parameters
 
-```
+```TOML
 [params]
 dateFormat = "02 of January of 2006" # How the date will be displayed on posts
 copyright = "1hiking" # Will be displayed on Footer

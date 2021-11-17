@@ -3,7 +3,7 @@
 
 name = "SimpleTheme"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+licenselink = "https://github.com/1hiking/SimpleTheme/blob/master/LICENSE"
 description = "A simple theme using the Nord palette"
 homepage = ""
 tags = ["blog"]
