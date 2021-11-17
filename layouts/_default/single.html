@@ -16,4 +16,20 @@
         {{.Content}}
     </div>
 </article>
+<div class="article-labels">
+    <div class="categories">
+        <p>Categories: 
+            {{ range .Params.categories}}
+            {{ . }}
+            {{ end }}
+        </p>
+    </div>
+    <div class="tags">
+        <p>Tags: 
+            {{ range .Params.tags}}
+            {{ . }}
+            {{ end }}
+        </p>
+    </div>
+</div>
 {{ end }}

@@ -92,7 +92,6 @@ nav.toc > p {
 
 nav#TableOfContents > ul, p{
     margin: 0;
-    padding-left: 10;
 }
 
 nav#TableOfContents > ul {
@@ -151,7 +150,22 @@ a:hover {
     color: var(--text-hover);
 }
 
-/* footer with copyright information */
+/* Article labels */
+
+.article-labels {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 10px;
+    justify-items: center;
+}
+
+.article-labels > .categories, .tags > p {
+    font-family: var(--font-family);
+    font-size: var(--font-body);
+    justify-content: center;
+}
+
+/* Footer with copyright information */
 
 footer {
     display: flex;

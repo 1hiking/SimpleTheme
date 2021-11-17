@@ -6,9 +6,9 @@ license = "MIT"
 licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
 description = "A simple theme using the Nord palette"
 homepage = ""
-tags = []
-features = []
-min_version = "0.41.0"
+tags = ["blog"]
+features = ["Nord theme"]
+min_version = "0.60.0"
 
 [author]
   name = "1hiking"
