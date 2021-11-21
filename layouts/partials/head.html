@@ -18,7 +18,7 @@
   <title>{{ .Site.Title }}</title>
   <meta property="og:title" content="{{ .Site.Title }}" />
   {{ end }}
-  <meta property="og:url" content="{{" .Permalink }} />
+  <meta property="og:url" content="{{" .Permalink "}} />
   {{$style := resources.Get "css/main.css" | minify }}
   <link rel="stylesheet" href="{{$style.Permalink | relURL}}" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
