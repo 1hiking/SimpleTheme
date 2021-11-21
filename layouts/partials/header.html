@@ -1,11 +1,11 @@
 <div class="header-nav">
   <header>
     <img
-      src="{{ .Site.Params.logo | safeHTML }}"
-      alt="{{ .Site.Params.logoalt }}"
+      src="{{- .Site.Params.logo | safeHTML }}"
+      alt="{{- .Site.Params.logoalt }}"
     />
     <a href="/">
-      <h1>{{ .Site.Title }}</h1>
+      <h1>{{- .Site.Title }}</h1>
     </a>
   </header>
 
