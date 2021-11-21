@@ -1,3 +1,9 @@
-<h{{ .Level }} id="{{ .Anchor | safeURL}}">{{ .Text | safeHTML }}
+{{ if .Page.IsPage }}
+<h{{ .Level }} id="{{ .Anchor | safeURL}}">{{- .Text | safeHTML }}
     <a class="anchor" href="#{{ .Anchor | safeHTML}}">🔗</a>
 </h{{ .Level }}>
+{{ else }}
+<h{{ .Level }} id="{{ .Anchor | safeURL}}">{{- .Text | safeHTML }}</h{{ .Level }}>
+{{ end }}
+
+{{/* We dont want anchors on index.html  */}}
