@@ -1,13 +1,9 @@
-{{ $currentPage := . }}
-{{ range .Site.Menus.main }}
-    {{ if .HasChildren }}
-        <a href="#">{{ .Pre }} {{ .Name }} </a>
-        {{ range .Children }}
-        <a href="{{ .URL }}">{{ .Name }}</a>
-        {{ end }}
-    {{ else }}
-        <a href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a>
-    {{ end }}
-{{ end }}
+{{ $currentPage := . }} {{ range .Site.Menus.main }} {{ if .HasChildren }}
+<a href="#">{{ .Pre }} {{ .Name }} </a>
+{{ range .Children }}
+<a href="{{ .URL }}">{{ .Name }}</a>
+{{ end }} {{ else }}
+<a href="{{ .URL }}">{{ .Pre }} {{ .Name }}</a>
+{{ end }} {{ end }}
 
 <!-- https://gohugo.io/templates/menu-templates/#section-menu-for-lazy-bloggers -->

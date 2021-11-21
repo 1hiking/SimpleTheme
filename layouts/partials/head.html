@@ -1,25 +1,27 @@
 <head>
-    {{/* https://gohugo.io/variables/page/ */}}
+  {{/* https://gohugo.io/variables/page/ */}}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Security-Policy"
-        content="form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; base-uri 'none'">
-    {{ if .IsPage }}
-    <meta property="og:title" content="{{.Site.Title}} | {{ .Title }}">
-    <meta property="og:description" content="{{ .Description }}">
-    <meta name="description" content="{{ .Description }}">
-    {{ with .Site.Author.name }}
-    <meta property="og:author" content="{{ . }}">
-    {{ end }}
-    {{ else }}
-    <meta property="og:title" content="{{.Site.Title}}">
-    {{ end }}
-    <meta property="og:url" content={{ .Permalink }}>
-    <title>{{.Site.Title}}</title>
-    {{$style := resources.Get "css/main.css" | minify }}
-    <link rel="stylesheet" href="{{$style.Permalink}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; base-uri 'none'"
+  />
+  {{ if .IsPage }}
+  <meta property="og:title" content="{{.Site.Title}} - {{ .Title }}" />
+  <title>{{.Site.Title }} - {{ .Title}}</title>
+  <meta property="og:description" content="{{ .Description }}" />
+  <meta name="description" content="{{ .Description }}" />
+  {{ with .Site.Author.name }}
+  <meta property="og:author" content="{{ . }}" />
+  {{ end }} {{ else }}
+  <title>{{ .Site.Title }}</title>
+  <meta property="og:title" content="{{ .Site.Title }}" />
+  {{ end }}
+  <meta property="og:url" content="{{" .Permalink }} />
+  {{$style := resources.Get "css/main.css" | minify }}
+  <link rel="stylesheet" href="{{$style.Permalink | relURL}}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 </head>

@@ -1,14 +1,15 @@
 {{ define "main" }}
 <div class="List">
-    <h2>{{.Title}}</h2>
-    {{ .Content }}
+  <h2>{{.Title}}</h2>
+  {{ .Content }}
 
-    <div class="list-items">
-        {{range.Pages}}
-        <span> <a href="{{.RelPermalink}}"> {{.Title}}</a>
-            <p>{{ .Description }}</p>
-        </span>
-        {{end}}
-    </div>
+  <div class="list-items">
+    {{range.Pages}}
+    <span>
+      <a href="{{.RelPermalink}}"> {{.Title}}</a>
+      <p>{{ .Description }}</p>
+    </span>
+    {{end}}
+  </div>
 </div>
 {{ end }}

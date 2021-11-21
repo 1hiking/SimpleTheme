@@ -1,35 +1,24 @@
-{{ define "main" }}
-{{$date := time.Format .Site.Params.dateFormat .Date }}
+{{ define "main" }} {{$date := time.Format .Site.Params.dateFormat .Date }}
 
 <article>
-    <div class="article-header">
-        <h1>{{.Title}}</h1>
-        <span class="author-date">
-            {{ with .Site.Author.name }}
-            <p>By {{ . }} ·
-                {{ end }}
-                <time>{{ $date }}</time>
-            </p>
-        </span>
-    </div>
-    <div class="article-content">
-        {{.Content}}
-    </div>
+  <div class="article-header">
+    <h1>{{.Title}}</h1>
+    <span class="author-date">
+      {{ with .Site.Author.name }}
+      <p>
+        By {{ . }} · {{ end }}
+        <time>{{ $date }}</time>
+      </p>
+    </span>
+  </div>
+  <div class="article-content">{{.Content}}</div>
 </article>
 <div class="article-labels">
-    <div class="categories">
-        <p>Categories: 
-            {{ range .Params.categories}}
-            {{ . }}
-            {{ end }}
-        </p>
-    </div>
-    <div class="tags">
-        <p>Tags: 
-            {{ range .Params.tags}}
-            {{ . }}
-            {{ end }}
-        </p>
-    </div>
+  <div class="categories">
+    <p>Categories: {{ range .Params.categories}} {{ . }} {{ end }}</p>
+  </div>
+  <div class="tags">
+    <p>Tags: {{ range .Params.tags}} {{ . }} {{ end }}</p>
+  </div>
 </div>
 {{ end }}
