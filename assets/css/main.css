@@ -17,11 +17,15 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
+  margin-bottom: 0;
   background-color: var(--background-color);
   color: var(--text-color);
+  height: 100vh;
 }
 
 /* Top page elements */
@@ -45,6 +49,7 @@ header {
   gap: 5px;
   flex-direction: row;
   justify-content: center;
+  min-height: 50px;
 }
 
 nav {
@@ -194,6 +199,8 @@ footer {
   flex-direction: row;
   justify-content: center;
   background-color: var(--boxed-background);
+  min-height: 50px;
+  margin-top: auto;
 }
 
 footer > p {
