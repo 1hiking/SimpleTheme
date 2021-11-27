@@ -14,6 +14,7 @@
   --font-body: medium;
   --margin-left: 10%;
   --marging-right: 10%;
+  --line-height: 1.25;
 }
 
 body {
@@ -41,7 +42,7 @@ body {
   font-weight: var(--font-title-weight);
   font-family: var(--font-family);
   font-size: var(--font-title);
-  line-height: 1.25;
+  line-height: var(--line-height);
 }
 
 header {
@@ -69,7 +70,7 @@ article {
   font-weight: var(--font-title-weight);
   font-family: var(--font-family);
   font-size: var(--font-title);
-  line-height: 1.25;
+  line-height: var(--line-height);
   text-align: center;
 }
 
@@ -81,7 +82,7 @@ h6 {
   font-weight: var(--font-title-weight);
   font-family: var(--font-family);
   font-size: var(--font-title);
-  line-height: 1.25;
+  line-height: var(--line-height);
 }
 
 .author-date {
@@ -90,12 +91,29 @@ h6 {
   text-align: center;
 }
 
+.author-date > p > a {
+  font-size: var(--font-author);
+}
+
 .article-content > p,
 a,
 li {
   font-family: var(--font-family);
   font-size: var(--font-body);
   text-decoration: none;
+}
+
+.article-content > p {
+  margin-bottom: 15px;
+}
+
+.article-content > img {
+  display: block;
+  margin:  0 auto;
+}
+
+pre {
+  overflow-x: auto;
 }
 
 /* Table of contents */
@@ -131,7 +149,7 @@ nav#TableOfContents > ul {
   font-weight: var(--font-title-weight);
   font-family: var(--font-family);
   font-size: var(--font-title);
-  line-height: 1.25;
+  line-height: var(--line-height);
   text-align: center;
 }
 
@@ -141,6 +159,10 @@ nav#TableOfContents > ul {
   column-gap: 10px;
   row-gap: 10px;
   justify-items: center;
+}
+
+.list-items > span {
+  width: 100%;
 }
 
 .list-items > span > p {
@@ -196,11 +218,13 @@ a:hover {
 
 footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   background-color: var(--boxed-background);
   min-height: 50px;
   margin-top: auto;
+  width: 100%;
 }
 
 footer > p {
@@ -219,7 +243,7 @@ footer > p {
   font-weight: var(--font-title-weight);
   font-family: var(--font-family);
   font-size: var(--font-title);
-  line-height: 1.25;
+  line-height: var(--line-height);
 }
 
 @media (prefers-color-scheme: light) {
