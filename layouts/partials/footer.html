@@ -3,7 +3,7 @@
   {{ with .Site.Params.copyright }}
   <p>© {{ now.Format "2006" }} {{- . }}</p>
   {{ end }}
-  {{ with .Site.Params.license }}
+  {{ with .Site.Params.footerText }}
   <p>{{- . }}</p>
   {{end}}
 </footer>

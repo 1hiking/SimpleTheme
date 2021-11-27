@@ -1,14 +1,10 @@
-{{ define "main" }} {{$date := time.Format .Site.Params.dateFormat .Date }}
+{{ define "main" }}
 
 <article>
   <div class="article-header">
     <h1>{{.Title}}</h1>
     <span class="author-date">
-      {{ with .Site.Author.name }}
-      <p>
-        By {{ . }} · {{ end }}
-        <time>{{ $date }}</time>
-      </p>
+      {{ partial "article-head-data.html" . }}
     </span>
   </div>
   <div class="article-content">{{.Content}}</div>

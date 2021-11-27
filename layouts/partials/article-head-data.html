@@ -1,0 +1,18 @@
+{{$date := time.Format .Site.Params.dateFormat .Date }} {{- $profilename :=
+    .Site.Author.name}} {{- $profilegithub := .Site.Author.github}} {{if not
+    $profilegithub}}
+
+    <span class="author-date">
+      {{ with .Site.Author.name }}
+      <p> By {{ $profilename }} · {{ end }} {{ $date }} </p>
+    </span>
+    {{ else }}
+    <span class="author-date">
+      {{ with .Site.Author.name }}
+      <p>
+        By 
+        <a href="https://github.com/{{- $profilegithub }}"> {{ $profilename }}</a>
+        · {{ end }} {{ $date }}
+      </p>
+    </span>
+    {{ end }}
