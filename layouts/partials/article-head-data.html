@@ -11,7 +11,7 @@
       {{ with .Site.Author.name }}
       <p>
         By 
-        <a href="https://github.com/{{- $profilegithub }}"> {{ $profilename }}</a>
+        <a href="https://github.com/{{- $profilegithub }}"> {{- $profilename }}</a>
         · {{ end }} {{ $date }}
       </p>
     </span>
