@@ -4,7 +4,7 @@
 
     <span class="author-date">
       {{ with .Site.Author.name }}
-      <p> By {{ $profilename }} · {{ end }} {{ $date }} </p>
+      <p> By {{ $profilename }} · {{ end }} {{- $date }} </p>
     </span>
     {{ else }}
     <span class="author-date">
@@ -12,7 +12,7 @@
       <p>
         By 
         <a href="https://github.com/{{- $profilegithub }}"> {{- $profilename }}</a>
-        · {{ end }} {{ $date }}
+        · {{ end }} {{- $date }}
       </p>
     </span>
     {{ end }}

@@ -42,6 +42,10 @@ github = "example" # https://github.com/example.
     style = 'nord' # Add nord to match theme's CSS
 ```
 
+## License
+
+To add license as HTML, override the `article-license.html` with a CC license for example, you could use the [Creative Commons webpage](https://creativecommons.org/choose/)
+
 ## Shortcodes
 
 You can add a Table of Content by adding the following line at the start of your

@@ -3,18 +3,23 @@
 <article>
   <div class="article-header">
     <h1>{{.Title}}</h1>
-    <span class="author-date">
-      {{ partial "article-head-data.html" . }}
-    </span>
+    <span class="author-date"> {{ partial "article-head-data.html" . }} </span>
   </div>
   <div class="article-content">{{.Content}}</div>
 </article>
+
+<div class="article-license"> {{ partial "article-license.html" . }} </div>
+
 <div class="article-labels">
+  {{ with .Params.categories }}
   <div class="categories">
-    <p>Categories: {{ range .Params.categories}} {{ . }} {{ end }}</p>
+    <p>Categories: {{ range .}} {{ . }} {{ end }}</p>
   </div>
+  {{ end }} {{ with .Params.tags}}
   <div class="tags">
-    <p>Tags: {{ range .Params.tags}} {{ . }} {{ end }}</p>
+    <p>Tags: {{ range . }} {{ . }} {{ end }}</p>
   </div>
+  {{ end }}
 </div>
+
 {{ end }}

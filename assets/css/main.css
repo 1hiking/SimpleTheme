@@ -198,6 +198,15 @@ a:hover {
   color: var(--text-hover);
 }
 
+/* Article license */
+
+.article-license {
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-size: var(--font-body);
+}
+
 /* Article labels */
 
 .article-labels {
