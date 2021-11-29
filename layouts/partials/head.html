@@ -8,8 +8,8 @@
     content="form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; base-uri 'none'"
   />
   {{ if .IsPage }}
-  <meta property="og:title" content="{{- .Site.Title}} - {{ .Title }}" />
-  <title>{{- .Site.Title }} - {{ .Title}}</title>
+  <meta property="og:title" content="{{- .Title}} - {{ .Site.Title }}" />
+  <title>{{- .Title }} - {{ .Site.Title}}</title>
   <meta property="og:description" content="{{- .Description }}" />
   <meta name="description" content="{{- .Description }}" />
   {{ with .Site.Author.name }}
@@ -21,8 +21,9 @@
   <meta property="og:url" content="{{- .Permalink }}" />
   {{$style := resources.Get "css/main.css" | minify }}
   <link rel="stylesheet" href="{{$style.Permalink | relURL}}" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" href="/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+  <meta property="og:image" content="/og-image.png">
 </head>
