@@ -13,8 +13,9 @@ Currently there are some issues:
 - If you add a new section and delete it while executing `hugo serve` it won't
   remove it from the navigation bar
 
-- If you add a \\\_index.md, it will refuse to load. Currently this behavior is
-  somewhat expected since they redirect to only lists.
+- If you add a \\\_index.md inside a content section, it will refuse to load.
+  Currently this behavior is somewhat expected since they redirect to only
+  lists.
 
 ## Theme parameters
 
@@ -42,9 +43,11 @@ github = "example" # https://github.com/example.
     style = 'nord' # Add nord to match theme's CSS
 ```
 
-## License
+## Adding a License
 
-To add license as HTML, override the `article-license.html` with a CC license for example, you could use the [Creative Commons webpage](https://creativecommons.org/choose/)
+To add license as HTML, override the `article-license.html` with a CC license
+for example, you could use the
+[Creative Commons webpage](https://creativecommons.org/choose/)
 
 ## Shortcodes
 
