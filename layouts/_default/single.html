@@ -10,16 +10,4 @@
 
 <div class="article-license"> {{ partial "article-license.html" . }} </div>
 
-<div class="article-labels">
-  {{ with .Params.categories }}
-  <div class="categories">
-    <p>Categories: {{ range .}} {{ . }} {{ end }}</p>
-  </div>
-  {{ end }} {{ with .Params.tags}}
-  <div class="tags">
-    <p>Tags: {{ range . }} {{ . }} {{ end }}</p>
-  </div>
-  {{ end }}
-</div>
-
-{{ end }}
+{{ partial "article-labels.html" . }} {{ end }}
