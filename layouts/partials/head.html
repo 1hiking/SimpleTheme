@@ -21,9 +21,5 @@
   <meta property="og:url" content="{{- .Permalink }}" />
   {{$style := resources.Get "css/main.css" | minify }}
   <link rel="stylesheet" href="{{$style.Permalink | relURL}}" />
-  <link rel="icon" href="/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
-  <meta property="og:image" content="/og-image.png">
+  {{ partial "head-favicon.html" .}}
 </head>
