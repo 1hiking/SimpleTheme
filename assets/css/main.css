@@ -15,18 +15,15 @@
   --margin-left: 10%;
   --marging-right: 10%;
   --line-height: 1.25;
+  height: 100vh;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 0;
+  position: relative;
+  margin: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Top page elements */
@@ -109,7 +106,7 @@ li {
 
 .article-content > img {
   display: block;
-  margin:  0 auto;
+  margin: 0 auto;
 }
 
 pre {
@@ -207,6 +204,10 @@ a:hover {
   font-size: var(--font-body);
 }
 
+.article-license > p {
+  background-color: var(--background-color);
+}
+
 /* Article labels */
 
 .article-labels {
@@ -234,6 +235,9 @@ footer {
   min-height: 50px;
   margin-top: auto;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 footer > p {
