@@ -59,8 +59,8 @@ Currently there are some issues:
 
 ## Adding a License
 
-To add license as HTML, override the `article-license.html` with a CC license
-for example, you could use the
+To add license as HTML, [override](https://gohugo.io/templates/lookup-order/)
+the `article-license.html` with a CC license for example, you could use the
 [Creative Commons webpage](https://creativecommons.org/choose/)
 
 ## Shortcodes
