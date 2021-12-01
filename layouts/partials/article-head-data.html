@@ -1,18 +1,16 @@
-{{$date := time.Format .Site.Params.dateFormat .Date }} {{- $profilename :=
-.Site.Author.name}} {{- $profilegithub := .Site.Author.github}} {{if not
-$profilegithub}}
-
+{{- $date := time.Format .Site.Params.dateFormat .Date }} {{- $lastmod := time.Format .Site.Params.dateFormat .Lastmod }} {{- $profilename :=
+.Site.Author.name}} {{- $profilegithub := .Site.Author.github}} {{if not $profilegithub}}
 <span class="author-date">
   {{ with .Site.Author.name }}
-  <p> By {{ $profilename }} · {{ end }} {{- $date }} </p>
+  <p>
+    By {{- . }} · {{ end }} Made at: {{ $date }} {{if ne $lastmod $date }} · Edited: {{- $lastmod }} {{ end }}
+  </p>
 </span>
 {{ else }}
 <span class="author-date">
   {{ with .Site.Author.name }}
   <p>
-    By
-    <a href="https://github.com/{{- $profilegithub }}"> {{- $profilename }}</a>
-    · {{ end }} {{- $date }}
+    By <a href="https://github.com/{{- $profilegithub }}"> {{- . }} </a> · {{ end }} Made at: {{ $date }} {{if ne $lastmod $date }} · Edited: {{ $lastmod }} {{ end }}
   </p>
 </span>
 {{ end }}
