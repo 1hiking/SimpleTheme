@@ -26,10 +26,19 @@
   {{ with .Get "sizes" }}sizes='{{.}}'
   {{ else }}
   sizes="(min-width: 35em) 720px, 100vw"{{ end }}
+  srcset='
+  {{ if ge $src.Width "500" }}
+    {{ with $tiny.RelPermalink }}{{.}} 500w{{ end }}
+  {{ end }}
+  {{ if ge $src.Width "800" }}
+    {{ with $small.RelPermalink }}, {{.}} 800w{{ end }}
+  {{ end }}
+  {{ if ge $src.Width "1200" }}
+    {{ with $medium.RelPermalink }}, {{.}} 1200w{{ end }}
+  {{ end }}'
   {{ if .Get (print $medium) }}
     src="{{ $medium.RelPermalink }}"
   {{ else }}
     src="{{ $src.RelPermalink }}"
   {{ end }}
   {{ with .Get "alt" }}alt="{{.}}"{{ else }}alt=""{{ end }}>
-
