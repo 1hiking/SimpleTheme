@@ -3,19 +3,19 @@
 A simple theme using the Nord palette (for the most part). Currently it is
 focused on single-author blogs and no i18n support.
 
-## Content configuration
+Some features:
 
-To make a new section on the navigation bar, just make a new folder on /content/
-and it will be picked up automatically.
+- Light & Dark mode
+- 100% only [Nord](https://www.nordtheme.com/) colors (see Theme params)
+- [Open Graph](https://ogp.me/) support
+- Support for favicons
+- Support for Vector (SVG) logos
+- Table of Contents and header anchors
+- Automatic navigation for content (with some caveats)
 
-Currently there are some issues:
+## Quick installation
 
-- If you add a new section and delete it while executing `hugo serve` it won't
-  remove it from the navigation bar
-
-- If you add a \\\_index.md inside a content section, it will refuse to load.
-  Currently this behavior is somewhat expected since they redirect to only
-  lists.
+`git submodule add https://github.com/1hiking/SimpleTheme.git themes/SimpleTheme`
 
 ## Theme parameters
 
@@ -40,8 +40,22 @@ github = "example" # https://github.com/example.
 
 [markup]
   [markup.highlight]
-    style = 'nord' # Add nord to match theme's CSS
+    style = 'nord' # Add nord to match theme's palette
 ```
+
+## Navigation caveats
+
+To make a new section on the navigation bar, just make a new folder on /content/
+and it will be picked up automatically.
+
+Currently there are some issues:
+
+- If you add a new section and delete it while executing `hugo serve` it won't
+  remove it from the navigation bar
+
+- If you add a \\\_index.md inside a content section, it will refuse to load.
+  Currently this behavior is somewhat expected since they redirect to only
+  lists.
 
 ## Adding a License
 
