@@ -1,10 +1,10 @@
 :root {
-  --background-color: #3b4252;
-  --boxed-background: #2e3440;
-  --blockquote-left-border: #dfe2e5;
-  --text-color: #e5e9f0;
+  --background-color: #2e3440;
+  --boxed-background: #3b4252;
+  --blockquote-left-border: #d8dee9;
+  --text-color: #eceff4;
   --text-visit: #88c0d0;
-  --text-hover: #8fbcbb;
+  --text-hover: #5e81ac;
   --font-title-weight: 600px;
   --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, "Microsoft YaHei", sans-serif, "Apple Color Emoji",
@@ -264,11 +264,13 @@ footer > p {
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background-color: #d8dee9;
-    --boxed-background: #eceff4;
-    --blockquote-left-border: #2e3440;
+    --background-color: #eceff4;
+    --boxed-background: #d8dee9;
+    --blockquote-left-border: #3b4252;
+    /* For some reason it triggers ACPA -80 but
+    it makes no sense imo */
     --text-color: #2e3440;
     --text-visit: #5e81ac;
-    --text-hover: #88c0d0;
+    --text-hover: #bf616a;
   }
 }
