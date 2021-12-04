@@ -1,0 +1,7 @@
+<figure>
+  {{ with .Title}}
+  <p>{{ . }}</p>
+  {{ end }}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+  <p>{{ .Text }}</p>
+</figure>

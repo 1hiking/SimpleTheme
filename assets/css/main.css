@@ -130,6 +130,8 @@ li {
   margin: 0 auto;
 }
 
+/* For code lines that are very long */
+
 pre {
   overflow-x: auto;
 }
@@ -204,6 +206,16 @@ blockquote {
   font-style: italic;
   padding-left: 0.5em;
   border-left: 0.25em solid var(--blockquote-left-border);
+}
+
+figure {
+  display: grid;
+  justify-items: center;
+}
+
+figure > p {
+  font-family: var(--font-family);
+  font-size: var(--font-body);
 }
 
 /* Any type of clickable link */

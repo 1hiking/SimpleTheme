@@ -1,7 +1,6 @@
 # SimpleTheme
 
-A simple theme using the Nord palette (for the most part). Currently it is
-focused on single-author blogs and no i18n support.
+A simple theme using the Nord palette (for the most part). Currently it is focused on single-author blogs and no i18n support.
 
 Some features:
 
@@ -45,46 +44,27 @@ github = "example" # https://github.com/example.
 
 ## Navigation caveats
 
-To make a new section on the navigation bar, just make a new folder on /content/
-and it will be picked up automatically.
+To make a new section on the navigation bar, just make a new folder on /content/ and it will be picked up automatically.
 
 Currently there are some issues:
 
-- If you add a new section and delete it while executing `hugo serve` it won't
-  remove it from the navigation bar
+- If you add a new section and delete it while executing `hugo serve` it won't remove it from the navigation bar
 
-- If you add a \\\_index.md inside a content section, it will refuse to load.
-  Currently this behavior is somewhat expected since they redirect to only
-  lists.
+- If you add a \\\_index.md inside a content section, it will refuse to load. Currently this behavior is somewhat expected since they redirect to only lists.
 
 ## Adding a License
 
-To add license as HTML, [override](https://gohugo.io/templates/lookup-order/)
-the `article-license.html` with a CC license for example, you could use the
+To add license as HTML, [override](https://gohugo.io/templates/lookup-order/) the `article-license.html` with a CC license for example, you could use the
 [Creative Commons webpage](https://creativecommons.org/choose/)
 
 ## Shortcodes
 
-You can add a Table of Content by adding the following line at the start of your
-article.
+You can add a Table of Content by adding the following line at the start of your article.
 
 `{{< toc >}}`
 
-You can define your own rendering on the
-[configuration file](https://gohugo.io/getting-started/configuration-markup#table-of-contents)
-
-It is highly suggested to add images on content posts by using the
-`{{< images >}}` shortcode instead of using \!\[images]\(/path/to/folder), the
-syntax is the following:
-
-`{{< images src="" alt="">}}`
-
-Where `src` is post to your path from assets.
-
-It is partially based on this
-[post](https://alexlakatos.com/web/2020/07/17/hugo-image-processing/)
+You can define your own rendering on the [configuration file](https://gohugo.io/getting-started/configuration-markup#table-of-contents)
 
 ## Credits
 
-Partial work of this page was taken from this
-[theme](https://github.com/qua3k/blog-theme)
+Partial work of this page was taken from this [theme](https://github.com/qua3k/blog-theme)

@@ -1,6 +1,0 @@
-{{/* get file that matches the filename as specified as src="" in shortcode */}}
-{{ $src := resources.GetMatch (.Get "src") }}
-{{ $alt := .Get "alt"}}
-
-
-<img sizes="(min-width: 35em) 720px, 100vw" src="{{$src.Permalink}}" alt="$alt">
