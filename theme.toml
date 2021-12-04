@@ -8,7 +8,7 @@ description = "A simple theme using the Nord palette"
 homepage = ""
 tags = ["blog"]
 features = ["Nord theme"]
-min_version = "0.60.0"
+min_version = "0.71.0"
 
 [author]
   name = "1hiking"
