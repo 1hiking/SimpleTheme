@@ -6,9 +6,8 @@
   --text-visit: #88c0d0;
   --text-hover: #5e81ac;
   --font-title-weight: 600px;
-  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Helvetica, Arial, "Microsoft YaHei", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Noto Color Emoji";
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Microsoft YaHei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Noto Color Emoji";
   --font-title: 20px;
   --font-author: small;
   --font-body: medium;
@@ -123,17 +122,12 @@ li {
 
 .article-content > p {
   margin-bottom: 15px;
+  word-wrap: break-word;
 }
 
 .article-content > img {
   display: block;
   margin: 0 auto;
-}
-
-/* For code lines that are very long */
-
-pre {
-  overflow-x: auto;
 }
 
 /* Table of contents */
@@ -200,13 +194,24 @@ li > a {
   margin: auto;
 }
 
+/* Code blocks */
+
+pre {
+  overflow-x: auto;
+}
+
+/* Blockquotes */
+
 blockquote {
   font-family: var(--font-family);
   font-size: var(--font-body);
   font-style: italic;
+  word-wrap: break-word;
   padding-left: 0.5em;
   border-left: 0.25em solid var(--blockquote-left-border);
 }
+
+/* Images with text */
 
 figure {
   display: grid;
