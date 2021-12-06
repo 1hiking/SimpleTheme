@@ -1,5 +1,7 @@
 # SimpleTheme
 
+![The words Simple theme with a white palette and bluish background](simpletheme.png)
+
 A simple theme using the Nord palette (for the most part). Currently it is focused on single-author blogs and no i18n support.
 
 Some features:
