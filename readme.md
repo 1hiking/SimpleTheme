@@ -1,18 +1,19 @@
 # SimpleTheme
 
-![The words Simple theme with a white palette and bluish background](simpletheme.png)
+![The words "Simple theme" with a white palette and bluish background](simpletheme.png)
 
-A simple theme using the Nord palette (for the most part). Currently it is focused on single-author blogs and no i18n support.
+A simple theme using the Nord palette. Currently it is focused on single-author blogs and no i18n support.
 
 Some features:
 
-- Light & Dark mode
-- 100% only [Nord](https://www.nordtheme.com/) colors (see Theme params)
+- Automatic light and dark themes
+- 100% only [Nord](https://www.nordtheme.com/) colors (Check [Theme Parameters](#theme-parameters) for code tags)
 - [Open Graph](https://ogp.me/) support
 - Support for favicons
-- Support for Vector (SVG) logos
-- Table of Contents and header anchors
+- Support for vector (SVG) logos
+- Table of contents and header anchors
 - Automatic navigation for content (with some caveats)
+- Support for [Image Processing](https://gohugo.io/content-management/image-processing/) without shortcodes (See [Images](#Images))
 
 ## Quick installation
 
@@ -66,6 +67,10 @@ You can add a Table of Content by adding the following line at the start of your
 `{{< toc >}}`
 
 You can define your own rendering on the [configuration file](https://gohugo.io/getting-started/configuration-markup#table-of-contents)
+
+## Images
+
+Images used on posts by default should be on /assets/ and not /static/
 
 ## Credits
 
