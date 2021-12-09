@@ -4,6 +4,6 @@
   {{ with .Title}}
   <p>{{ . }}</p>
   {{ end }}
-  <img src="{{ $image.Permalink }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
+  <img src="{{ $image.Permalink }}" alt="" {{ with .Title}} title="{{ . }}" {{ end }} />
   <figcaption>{{ .Text }}</figcaption>
 </figure>

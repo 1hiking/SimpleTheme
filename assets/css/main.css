@@ -125,9 +125,10 @@ li {
   word-wrap: break-word;
 }
 
-.article-content > img {
+figure > img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
 }
 
 /* Table of contents */
@@ -221,6 +222,7 @@ figure {
 figure > figcaption {
   font-family: var(--font-family);
   font-size: var(--font-body);
+  font-style: italic;
 }
 
 /* Any type of clickable link */
