@@ -44,6 +44,7 @@ body {
 
 header {
   display: flex;
+  font-family: "JetBrainsMono-Regular";
   gap: 5px;
   flex-direction: row;
   justify-content: center;
@@ -191,6 +192,11 @@ pre {
   overflow-x: auto;
 }
 
+pre > code > span {
+  font-family: "JetBrainsMono-Regular", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
 /* Blockquotes */
 
 blockquote {
@@ -285,4 +291,14 @@ footer > p {
     --text-visit: #5e81ac;
     --text-hover: #bf616a;
   }
+}
+
+@font-face {
+  font-family: "JetBrainsMono-Bold";
+  src: url("/JetBrainsMono-2.242/fonts/webfonts/JetBrainsMono-Bold.woff2");
+}
+
+@font-face {
+  font-family: "JetBrainsMono-Regular";
+  src: url("/JetBrainsMono-2.242/fonts/webfonts/JetBrainsMono-Regular.woff2");
 }
