@@ -6,7 +6,5 @@
   </div>
   <div class="article-content">{{.Content}}</div>
 </article>
-
-<div class="article-license"> {{ partial "article-license.html" . }} </div>
-
-{{ end }}
+{{ partial "article-related" . }}
+<div class="article-license">{{partial "article-license" . }} </div>{{ end }}

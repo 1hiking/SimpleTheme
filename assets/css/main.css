@@ -18,6 +18,7 @@
 }
 
 body {
+  font-family: var(--font-family);
   position: relative;
   margin: 0;
   background-color: var(--background-color);
@@ -37,9 +38,8 @@ body {
 
 .header-nav > header > a > h1 {
   font-weight: var(--font-title-weight);
-  font-family: var(--font-family);
+  color: var(--text-color);
   font-size: var(--font-title);
-  line-height: var(--line-height);
 }
 
 header {
@@ -48,6 +48,10 @@ header {
   flex-direction: row;
   justify-content: center;
   min-height: 50px;
+}
+
+header > a {
+  display: flex;
 }
 
 nav {
@@ -67,7 +71,6 @@ nav {
 
 .article-labels > .categories,
 .tags > p {
-  font-family: var(--font-family);
   font-size: var(--font-body);
   justify-content: center;
 }
@@ -85,7 +88,6 @@ article {
 
 .article-header > h1 {
   font-weight: var(--font-title-weight);
-  font-family: var(--font-family);
   font-size: var(--font-title);
   line-height: var(--line-height);
   text-align: center;
@@ -97,13 +99,10 @@ h4,
 h5,
 h6 {
   font-weight: var(--font-title-weight);
-  font-family: var(--font-family);
-  font-size: var(--font-title);
   line-height: var(--line-height);
 }
 
 .author-date {
-  font-family: var(--font-family);
   font-size: var(--font-author);
   text-align: center;
 }
@@ -115,7 +114,6 @@ h6 {
 .article-content > p,
 a,
 li {
-  font-family: var(--font-family);
   font-size: var(--font-body);
   text-decoration: none;
 }
@@ -140,7 +138,6 @@ nav.toc {
 }
 
 nav.toc > p {
-  font-family: var(--font-family);
   font-size: var(--font-title);
 }
 
@@ -162,28 +159,21 @@ nav#TableOfContents > ul {
 
 .List > h2 {
   font-weight: var(--font-title-weight);
-  font-family: var(--font-family);
   font-size: var(--font-title);
   line-height: var(--line-height);
   text-align: center;
 }
 
 .list-items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 10px;
-  row-gap: 10px;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .list-items > span {
-  width: 100%;
-}
-
-.list-items > span > p {
-  font-family: var(--font-family);
   font-size: var(--font-body);
-  text-align: left;
+  text-align: center;
+  width: 100%;
 }
 
 /* Avoid weird spaces when a link is nested inside a paragraph */
@@ -204,7 +194,6 @@ pre {
 /* Blockquotes */
 
 blockquote {
-  font-family: var(--font-family);
   font-size: var(--font-body);
   font-style: italic;
   word-wrap: break-word;
@@ -220,7 +209,6 @@ figure {
 }
 
 figure > figcaption {
-  font-family: var(--font-family);
   font-size: var(--font-body);
   font-style: italic;
 }
@@ -233,6 +221,13 @@ a:any-link {
 
 a:hover {
   color: var(--text-hover);
+}
+
+/* Article related */
+
+.article-related {
+  display: flex;
+  justify-content: space-around;
 }
 
 /* Article license */
@@ -263,7 +258,6 @@ footer {
 }
 
 footer > p {
-  font-family: var(--font-family);
   font-size: var(--font-body);
   text-decoration: none;
 }
@@ -276,7 +270,6 @@ footer > p {
 
 .error404 > h1 {
   font-weight: var(--font-title-weight);
-  font-family: var(--font-family);
   font-size: var(--font-title);
   line-height: var(--line-height);
 }

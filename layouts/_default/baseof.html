@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-us" prefix="og: https://ogp.me/ns#">
-  {{- partial "head.html" . }}
+  {{- partial "base_of-head.html" . }}
 
   <body>
-    {{- partial "header.html" . }} {{- block "main" . }}{{- end }} {{- partial
-    "footer.html" . }}
+    {{- partial "base_of-header.html" . }} {{- block "main" . }}{{- end }} {{- partial "base_of-footer.html" . }}
   </body>
 </html>

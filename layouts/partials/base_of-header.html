@@ -1,0 +1,10 @@
+<div class="header-nav">
+  <header>
+    <a href="/">
+      <img src="{{- .Site.Params.logo | safeHTML }}" alt="{{- .Site.Params.logoalt }}" />
+      <h1>{{- .Site.Title }}</h1>
+    </a>
+  </header>
+
+  <nav>{{- partial "header-nav.html" . -}}</nav>
+</div>

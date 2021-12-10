@@ -3,10 +3,7 @@
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    http-equiv="Content-Security-Policy"
-    content="form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; base-uri 'none'"
-  />
+  <meta http-equiv="Content-Security-Policy" content="form-action 'none'; upgrade-insecure-requests; block-all-mixed-content; base-uri 'none'" />
   {{ if .IsPage }}
   <meta property="og:title" content="{{- .Title}} - {{ .Site.Title }}" />
   <title>{{- .Title }} - {{ .Site.Title}}</title>
@@ -21,5 +18,5 @@
   <meta property="og:url" content="{{- .Permalink }}" />
   {{$style := resources.Get "css/main.css" | minify }}
   <link rel="stylesheet" href="{{$style.Permalink | relURL}}" />
-  {{ partial "head-favicon.html" .}}
+  {{ partial "partial-head-favicon.html" .}}
 </head>
