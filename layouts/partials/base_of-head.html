@@ -16,7 +16,9 @@
   <meta property="og:title" content="{{- .Site.Title }}" />
   {{ end }}
   <meta property="og:url" content="{{- .Permalink }}" />
-  {{$style := resources.Get "css/main.css" | minify }}
-  <link rel="stylesheet" href="{{$style.Permalink | relURL}}" />
+  {{$style := resources.Get "css/main.css"}}
+  {{$style := $style | resources.PostCSS }}
+  {{$style := $style | minify | fingerprint | resources.PostProcess }}
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   {{ partial "partial-head-favicon.html" .}}
 </head>

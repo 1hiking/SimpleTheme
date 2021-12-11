@@ -70,7 +70,10 @@ You can define your own rendering on the [configuration file](https://gohugo.io/
 
 ## Images
 
-Images used on posts by default should be on /assets/ and not /static/
+Images used on posts by default should be on /assets/ and not /static/. Furthermore, instead of using a simple `<img>` tag, we use a `<figure>`.
+
+This is thanks to [Markup Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) which means you can keep using the simple
+`![]`
 
 ## Credits
 
