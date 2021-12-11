@@ -24,6 +24,7 @@ Some features:
 
 - `npm install @fullhuman/postcss-purgecss autoprefixer postcss postcss-cli`
 - Add `postCSS = true` in `[params]`
+- Also add `writeStats = true` in `[build]`
 - To configure postCSS, add a `postcss.config.js` and modify it.
 
 Might want to read: [How to PostCSS in Hugo](https://rajasimon.io/blog/postcss-in-hugo/).
@@ -37,6 +38,9 @@ relativeURLs = true
 title = "Example Site"
 theme = "SimpleTheme"
 sectionPagesMenu = "main" # Enables automatic navigation bar.
+
+[build]
+writeStats = true
 
 [params]
 dateFormat = "02 of January of 2006" # How the date will be displayed on posts.
