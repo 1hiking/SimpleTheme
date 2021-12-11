@@ -14,10 +14,12 @@ Some features:
 - Table of contents and header anchors
 - Automatic navigation for content (with some caveats)
 - Support for [Image Processing](https://gohugo.io/content-management/image-processing/) without shortcodes (See [Images](#Images))
+- PostCSS
 
 ## Quick installation
 
 `git submodule add https://github.com/1hiking/SimpleTheme.git themes/SimpleTheme`
+`cd themes/SimpleTheme` then `npm install`
 
 ## Theme parameters
 
