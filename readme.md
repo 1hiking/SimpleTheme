@@ -19,7 +19,14 @@ Some features:
 ## Quick installation
 
 `git submodule add https://github.com/1hiking/SimpleTheme.git themes/SimpleTheme`
-`cd themes/SimpleTheme` then `npm install`
+
+(Optional) For postCSS support you have to do the following commands:
+
+- `npm install @fullhuman/postcss-purgecss autoprefixer postcss postcss-cli`
+- Add `postCSS = true` in `[params]`
+- To configure postCSS, add a `postcss.config.js` and modify it.
+
+Might want to read: [How to PostCSS in Hugo](https://rajasimon.io/blog/postcss-in-hugo/).
 
 ## Theme parameters
 
@@ -37,6 +44,7 @@ copyright = "1hiking" # Will be displayed on Footer.
 footerText = "SampleText" # Any text you might want to display will go here.
 logo = "/path/to/image" # Supports SVG.
 logoalt = "My great logo" # alt description of the logo.
+postCSS = true # For postCSS support.
 
 [author]
 name = "example" # Name of the author.
@@ -79,4 +87,4 @@ This is thanks to [Markup Render Hooks](https://gohugo.io/getting-started/config
 
 ## Credits
 
-Partial work of this page was taken from this [theme](https://github.com/qua3k/blog-theme)
+Partial work of this page was taken from this [theme](https://github.com/qua3k/blog-theme).
