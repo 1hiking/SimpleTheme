@@ -79,7 +79,7 @@ nav {
 
 /* Article elements */
 
-article {
+main {
   margin-left: var(--margin-left);
   margin-right: var(--marging-right);
   background-color: var(--boxed-background);
