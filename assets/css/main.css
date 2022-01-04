@@ -133,13 +133,13 @@ figure > img {
 
 /* Table of contents */
 
-nav.toc {
+div.toc {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-nav.toc > p {
+div.toc > p {
   font-size: var(--font-title);
 }
 
