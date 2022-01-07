@@ -172,7 +172,7 @@ nav#TableOfContents > ul {
   gap: 10px;
 }
 
-.list-items > span {
+.list-items > article {
   font-size: var(--font-body);
   text-align: center;
   width: 100%;

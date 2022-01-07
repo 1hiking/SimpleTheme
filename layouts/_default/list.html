@@ -7,10 +7,10 @@
   <div class="list-items">
     {{range.Pages}}
     {{/* TODO weird space between some elements */}}
-    <span>
+    <article>
       <a href="{{.RelPermalink}}"> {{.Title}}</a>
       <p>{{ .Description }}</p>
-    </span>
+    </article>
     {{end}}
   </div>
 </div>
