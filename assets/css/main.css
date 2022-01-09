@@ -262,6 +262,7 @@ footer {
   width: 100%;
   position: sticky;
   top: 100vh;
+  padding-bottom: 10px;
 }
 
 footer > p {
