@@ -26,6 +26,10 @@ body {
   min-height: 100vh;
 }
 
+p {
+  margin: 0;
+}
+
 /* Top page elements */
 .header-nav {
   display: flex;
@@ -133,23 +137,22 @@ figure > img {
 
 /* Table of contents */
 
-div.toc {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-div.toc > p {
+summary {
   font-size: var(--font-title);
+  user-select: none;
 }
 
-nav#TableOfContents > ul,
-p {
-  margin: 0;
+summary:hover {
+  cursor: pointer;
 }
 
-nav#TableOfContents > ul {
-  margin-bottom: 1.2em;
+nav#TableOfContents {
+  display: inherit;
+}
+
+details > nav#TableOfContents > ul {
+  list-style-type: none;
+  padding: inherit;
 }
 
 /* Lists */
