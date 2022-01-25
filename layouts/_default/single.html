@@ -1,10 +1,12 @@
 {{ define "main" }} {{ partial "article-labels.html" . }}
 <main>
-  <div class="article-header">
-    <h1>{{.Title}}</h1>
-    {{ partial "article-head-data.html" . }}
-  </div>
-  <div class="article-content">{{.Content}}</div>
+  <article>
+    <div class="article-header">
+      <h1>{{.Title}}</h1>
+      {{ partial "article-head-data.html" . }}
+    </div>
+    <div class="article-content">{{.Content}}</div>
+  </article>
 </main>
 {{ partial "article-related" . }}
 <div class="article-license">{{partial "article-license" . }} </div>{{ end }}

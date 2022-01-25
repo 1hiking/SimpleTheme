@@ -6,13 +6,13 @@ A simple theme using the Nord palette. Currently it is focused on single-author 
 
 Some features:
 
-- Automatic light and dark themes
+- Automatic light and dark theme
 - 100% only [Nord](https://www.nordtheme.com/) colors (Check [Theme Parameters](#theme-parameters) for code tags)
 - [Open Graph](https://ogp.me/) support
 - Support for favicons
 - Support for vector (SVG) logos
 - Table of contents and header anchors
-- Automatic navigation for content (with some caveats)
+- Support for navigation headers
 - Support for [Image Processing](https://gohugo.io/content-management/image-processing/) without shortcodes (See [Images](#Images))
 - PostCSS
 
@@ -40,7 +40,21 @@ theme = "SimpleTheme"
 sectionPagesMenu = "main" # Enables automatic navigation bar.
 
 [build]
-writeStats = true
+writeStats = true # Needed for PostCSS
+
+[menu]
+# https://gohugo.io/content-management/menus/
+[[menu.main]]
+identifier = "About"
+name = "About"
+url = "/about/"
+weight = 10
+
+[[menu.main]]
+homepage = "Posts"
+name = "Posts"
+url = "/posts/"
+weight = 10
 
 [params]
 dateFormat = "02 of January of 2006" # How the date will be displayed on posts.
@@ -59,22 +73,12 @@ github = "example" # https://github.com/example.
     style = 'nord' # Add nord to match theme's palette
 ```
 
-## Navigation caveats
-
-To make a new section on the navigation bar, just make a new folder on /content/ and it will be picked up automatically.
-
-Currently there are some issues:
-
-- If you add a new section and delete it while executing `hugo serve` it won't remove it from the navigation bar
-
-- If you add a \\\_index.md inside a content section, it will refuse to load. Currently this behavior is somewhat expected since they redirect to only lists.
-
 ## Adding a License
 
 To add license as HTML, [override](https://gohugo.io/templates/lookup-order/) the `article-license.html` with a CC license for example, you could use the
 [Creative Commons webpage](https://creativecommons.org/choose/)
 
-## Shortcodes
+## Custom Shortcodes
 
 You can add a Table of Content by adding the following line at the start of your article.
 

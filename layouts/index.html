@@ -6,4 +6,13 @@
   </div>
   <div class="article-content"> {{- .Content }} </div>
 </main>
+<p>Latest Posts:</p>
+<div class="index-container">
+  {{ range first 5 ( where .Site.RegularPages "Type" "in" site.Params.mainSections )}}
+  <nav>
+    <a href="{{- .Permalink }}">{{- .Title}}</a>
+    <p>{{- .Description }}</p>
+  </nav>
+  {{ end }}
+</div>
 {{ end }}
