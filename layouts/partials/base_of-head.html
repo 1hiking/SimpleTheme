@@ -16,13 +16,17 @@
   <meta property="og:title" content="{{- .Site.Title }}" />
   {{ end }}
   <meta property="og:url" content="{{- .Permalink }}" />
+
+  {{$options := (dict "outputStyle" "compressed")}}
   {{ if eq .Site.Params.Postcss true }}
-  {{$style := resources.Get "css/main.css"}}
+  {{$sass := resources.Get "scss/main.scss" }}
+  {{$style := $sass | resources.ToCSS $options }}
   {{$style := $style | resources.PostCSS }}
   {{$style := $style | minify | fingerprint | resources.PostProcess }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   {{ else }}
-  {{$style := resources.Get "css/main.css" | minify}}
+  {{$sass := resources.Get "scss/main.scss" }}
+  {{$style := $sass | resources.ToCSS $options }}
   <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   {{ end }}
   {{ partial "partial-head-favicon.html" .}}

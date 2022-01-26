@@ -1,13 +1,7 @@
 <div class="article-related">
   {{if .PrevInSection}}
-  <p>
-    Previous post: <br />
-    <a href="{{- .PrevInSection.Permalink}}">{{- .PrevInSection.Title}}</a>
-  </p>
+  <p> Previous: <a href="{{- .PrevInSection.Permalink}}">{{- .PrevInSection.Title}}</a> </p>
   {{end}} {{if .NextInSection}}
-  <p>
-    Next Post: <br />
-    <a href="{{- .NextInSection.Permalink}}">{{- .NextInSection.Title}}</a>
-  </p>
+  <p> Next: <a href="{{- .NextInSection.Permalink}}">{{- .NextInSection.Title}}</a> </p>
   {{ end }}
 </div>

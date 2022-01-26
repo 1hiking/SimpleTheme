@@ -14,6 +14,7 @@
   --margin-horizontal: 10%;
   --line-height: 1.25;
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -34,20 +35,20 @@ body {
   background-color: var(--boxed-background);
   margin-bottom: 10px;
   border-radius: 0px 0px 20px 20px;
-}
 
-.header-nav h1 {
-  font-weight: var(--font-title-weight);
-  color: var(--text-color);
-  font-size: var(--font-title);
-  /* Firefox */
-  white-space: nowrap;
-}
+  h1 {
+    font-weight: var(--font-title-weight);
+    color: var(--text-color);
+    font-size: var(--font-title);
+    /* Firefox */
+    white-space: nowrap;
+  }
 
-.header-nav nav {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
+  nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
 }
 
 header {
@@ -57,10 +58,10 @@ header {
   flex-direction: row;
   justify-content: center;
   min-height: 50px;
-}
 
-header > a {
-  display: flex;
+  & > a {
+    display: flex;
+  }
 }
 
 /* Article labels */
@@ -70,12 +71,7 @@ header > a {
   grid-template-columns: repeat(2, 1fr);
   column-gap: 10px;
   justify-items: center;
-}
-
-.article-labels > .categories,
-.tags > p {
-  font-size: var(--font-body);
-  justify-content: center;
+  margin: 0 var(--margin-horizontal);
 }
 
 /* Article elements */
@@ -97,24 +93,23 @@ main {
 .author-date {
   font-size: var(--font-author);
   text-align: center;
+  & > p > a {
+    font-size: var(--font-author);
+  }
 }
 
-.author-date > p > a {
-  font-size: var(--font-author);
-}
+/* This does not target all h elements inside article-content... only the h2, the rest has different specifity */
 
-.article-content > h2,
+h2,
 h3,
 h4,
 h5,
 h6 {
   font-weight: var(--font-title-weight);
-  line-height: var(--line-height);
 }
 
 .article-content > p,
-a,
-li {
+a {
   font-size: var(--font-body);
   text-decoration: none;
 }
@@ -135,48 +130,43 @@ figure > img {
 summary {
   font-size: var(--font-title);
   user-select: none;
-}
 
-summary:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 nav#TableOfContents {
   display: inherit;
 }
 
-details > nav#TableOfContents > ul {
-  list-style-type: none;
-  padding: inherit;
-}
-
 /* Lists */
 
 .list {
   margin: auto var(--margin-horizontal);
-}
+  h1 {
+    font-weight: var(--font-title-weight);
+    font-size: var(--font-title);
+    line-height: var(--line-height);
+    text-align: center;
+  }
 
-.list h1 {
-  font-weight: var(--font-title-weight);
-  font-size: var(--font-title);
-  line-height: var(--line-height);
-  text-align: center;
-}
+  &-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 10px;
+    animation: slideIn 1s;
 
-.list-items {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
+    p {
+      margin: 0;
+    }
 
-.list-items p {
-  margin: 0;
-}
-
-.list-items > article {
-  font-size: var(--font-body);
-  text-align: center;
-  width: 100%;
+    & > article {
+      font-size: var(--font-body);
+      text-align: center;
+      width: 100%;
+    }
+  }
 }
 
 /* Avoid weird spaces when a link is nested inside a paragraph */
@@ -192,9 +182,6 @@ li > a {
 
 pre {
   overflow-x: auto;
-}
-
-pre > code > span {
   font-family: "JetBrainsMono-Regular", Arial, Helvetica, sans-serif;
   font-size: 13px;
 }
@@ -214,21 +201,21 @@ blockquote {
 figure {
   display: grid;
   justify-items: center;
-}
-
-figure figcaption {
-  font-size: var(--font-body);
-  font-style: italic;
+  figcaption {
+    font-size: var(--font-body);
+    font-style: italic;
+  }
 }
 
 /* Any type of clickable link */
 
-a:any-link {
-  color: var(--text-visit);
-}
-
-a:hover {
-  color: var(--text-hover);
+a {
+  &:any-link {
+    color: var(--text-visit);
+  }
+  &:hover {
+    color: var(--text-hover);
+  }
 }
 
 /* Article related */
@@ -236,6 +223,7 @@ a:hover {
 .article-related {
   display: flex;
   justify-content: space-around;
+  margin: 0 var(--margin-horizontal);
 }
 
 /* Article license */
@@ -245,24 +233,26 @@ a:hover {
   justify-content: center;
 }
 
-.article-license > p {
-  background-color: var(--background-color);
-}
-
 /* Index container */
 
 .index-container {
   margin: auto var(--margin-horizontal);
-  animation: slideIn 1s;
-}
 
-.index-container ul {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-}
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  li {
+    list-style-type: none;
+    animation: slideIn 1s;
+    animation-fill-mode: backwards;
+  }
 
-.index-container li {
-  list-style-type: none;
+  @for $i from 1 through 5 {
+    li:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.06}s;
+    }
+  }
 }
 
 @keyframes slideIn {
@@ -279,51 +269,31 @@ a:hover {
 
 footer {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: var(--boxed-background);
-  min-height: 50px;
+  min-height: 70px;
   width: 100%;
   position: sticky;
   top: 100vh;
-  padding-bottom: 10px;
-  border-radius: 20px 20px 0px 0px;
-}
+  border-radius: 20px 20px 0 0;
 
-footer > p {
-  font-size: var(--font-body);
-  text-decoration: none;
-  margin: 0;
+  & > p {
+    font-size: var(--font-body);
+    text-decoration: none;
+    margin: 0;
+  }
 }
 
 /* 404 */
 
 .error404 {
   text-align: center;
-}
 
-.error404 > h1 {
-  font-weight: var(--font-title-weight);
-  font-size: var(--font-title);
-  line-height: var(--line-height);
-}
-
-@media screen and (max-width: 912px) {
-  .list-items {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 0px;
-  }
-
-  .index-container nav > p {
-    text-align: center;
-  }
-
-  .index-container ul {
-    display: flex;
-    flex-direction: column;
+  & > h1 {
+    font-weight: var(--font-title-weight);
+    font-size: var(--font-title);
+    line-height: var(--line-height);
   }
 }
 
