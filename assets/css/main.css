@@ -252,12 +252,17 @@ a:hover {
 /* Index container */
 
 .index-container {
+  margin: auto var(--margin-horizontal);
+  animation: slideIn 1s;
+}
+
+.index-container ul {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
 
-.index-container > * {
-  animation: slideIn 1s;
+.index-container li {
+  list-style-type: none;
 }
 
 @keyframes slideIn {
@@ -311,7 +316,12 @@ footer > p {
     gap: 10px;
     margin: 10px 0px;
   }
-  .index-container {
+
+  .index-container nav > p {
+    text-align: center;
+  }
+
+  .index-container ul {
     display: flex;
     flex-direction: column;
   }
