@@ -310,6 +310,17 @@ footer {
   }
 }
 
+@media (prefers-reduced-motion) {
+  .list-items {
+    animation: none;
+  }
+  .index-container {
+    li {
+      animation: none;
+    }
+  }
+}
+
 @font-face {
   font-family: "JetBrainsMono-Bold";
   src: url("/JetBrainsMono-2.242/fonts/webfonts/JetBrainsMono-Bold.woff2");
