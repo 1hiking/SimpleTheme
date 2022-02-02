@@ -98,13 +98,7 @@ main {
   }
 }
 
-/* This does not target all h elements inside article-content... only the h2, the rest has different specifity */
-
-h2,
-h3,
-h4,
-h5,
-h6 {
+:is(h2, h3, h4, h5, h6) {
   font-weight: var(--font-title-weight);
 }
 
@@ -117,12 +111,6 @@ a {
 .article-content > p {
   margin-bottom: 15px;
   word-wrap: break-word;
-}
-
-figure > img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
 }
 
 /* Table of contents */
@@ -153,7 +141,7 @@ nav#TableOfContents {
 
   &-items {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
     animation: slideIn 1s;
 
@@ -161,10 +149,13 @@ nav#TableOfContents {
       margin: 0;
     }
 
-    & > article {
+    article {
       font-size: var(--font-body);
       text-align: center;
       width: 100%;
+      &:nth-child(1) {
+        grid-column: 2 span / auto;
+      }
     }
   }
 }
@@ -199,12 +190,23 @@ blockquote {
 /* Images with text */
 
 figure {
+  border-style: var(--blockquote-left-border);
+  border-left: dotted;
+  border-right: dotted;
   display: grid;
   justify-items: center;
-  figcaption {
-    font-size: var(--font-body);
-    font-style: italic;
+  figcaption > * {
+    text-align: center;
+    margin: 0.1px;
   }
+}
+
+/* Images with markdown style */
+
+p > img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 /* Any type of clickable link */
@@ -319,12 +321,6 @@ footer {
       animation: none;
     }
   }
-}
-
-@font-face {
-  font-family: "JetBrainsMono-Bold";
-  src: url("/JetBrainsMono-2.242/fonts/webfonts/JetBrainsMono-Bold.woff2");
-  font-display: swap;
 }
 
 @font-face {

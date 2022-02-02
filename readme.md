@@ -86,13 +86,6 @@ You can add a Table of Content by adding the following line at the start of your
 
 You can define your own rendering on the [configuration file](https://gohugo.io/getting-started/configuration-markup#table-of-contents)
 
-## Images
-
-Images used on posts by default should be on /assets/ and not /static/. Furthermore, instead of using a simple `<img>` tag, we use a `<figure>`.
-
-This is thanks to [Markup Render Hooks](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks) which means you can keep using the simple
-`![]`
-
 ## Credits
 
 Partial work of this page was taken from this [theme](https://github.com/qua3k/blog-theme).
