@@ -18,16 +18,8 @@
   <meta property="og:url" content="{{- .Permalink }}" />
 
   {{$options := (dict "outputStyle" "compressed")}}
-  {{ if eq .Site.Params.Postcss true }}
-  {{$sass := resources.Get "scss/main.scss" }}
-  {{$style := $sass | resources.ToCSS $options }}
-  {{$style := $style | resources.PostCSS }}
-  {{$style := $style | minify | fingerprint | resources.PostProcess }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-  {{ else }}
-  {{$sass := resources.Get "scss/main.scss" }}
-  {{$style := $sass | resources.ToCSS $options }}
-  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-  {{ end }}
+  {{$css := resources.Get "css/main.css" | resources.Minify }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+
   {{ partial "partial-head-favicon.html" .}}
 </head>

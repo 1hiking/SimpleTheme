@@ -63,7 +63,7 @@ header {
   justify-content: center;
   min-height: 50px;
 
-  & > a {
+  &>a {
     display: flex;
   }
 }
@@ -87,7 +87,7 @@ main {
   padding: 5px 10px;
 }
 
-.article-header > h1 {
+.article-header>h1 {
   font-weight: var(--font-title-weight);
   font-size: var(--font-title);
   line-height: var(--line-height);
@@ -97,7 +97,8 @@ main {
 .author-date {
   font-size: var(--font-author);
   text-align: center;
-  & > p > a {
+
+  &>p>a {
     font-size: var(--font-author);
   }
 }
@@ -106,13 +107,13 @@ main {
   font-weight: var(--font-title-weight);
 }
 
-.article-content > p,
+.article-content>p,
 a {
   font-size: var(--font-body);
   text-decoration: none;
 }
 
-.article-content > p {
+.article-content>p {
   margin-bottom: 15px;
   word-wrap: break-word;
 }
@@ -136,6 +137,7 @@ nav#TableOfContents {
 
 .list {
   margin: auto var(--margin-horizontal);
+
   h1 {
     font-weight: var(--font-title-weight);
     font-size: var(--font-title);
@@ -157,6 +159,7 @@ nav#TableOfContents {
       font-size: var(--font-body);
       text-align: center;
       width: 100%;
+
       &:nth-child(1) {
         grid-column: 2 span / auto;
       }
@@ -165,11 +168,11 @@ nav#TableOfContents {
 }
 
 /* Avoid weird spaces when a link is nested inside a paragraph */
-p > a {
+p>a {
   margin: auto;
 }
 
-li > a {
+li>a {
   margin: auto;
 }
 
@@ -199,10 +202,12 @@ figure {
   border-right: dotted;
   display: grid;
   justify-items: center;
+
   img {
     max-width: 100%;
   }
-  figcaption > * {
+
+  figcaption>* {
     text-align: center;
     margin: 0.1px;
   }
@@ -210,7 +215,7 @@ figure {
 
 /* Images with markdown style */
 
-p > img {
+p>img {
   display: block;
   margin: 0 auto;
   max-width: 100%;
@@ -222,6 +227,7 @@ a {
   &:any-link {
     color: var(--text-visit);
   }
+
   &:hover {
     color: var(--text-hover);
   }
@@ -251,17 +257,13 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+
   li {
     list-style-type: none;
     animation: slideIn 1s;
     animation-fill-mode: backwards;
   }
 
-  @for $i from 1 through 5 {
-    li:nth-child(#{$i}) {
-      animation-delay: #{$i * 0.06}s;
-    }
-  }
 }
 
 @keyframes slideIn {
@@ -287,7 +289,7 @@ footer {
   top: 100vh;
   border-radius: 20px 20px 0 0;
 
-  & > p {
+  &>p {
     font-size: var(--font-body);
     text-decoration: none;
     margin: 0;
@@ -299,7 +301,7 @@ footer {
 .error404 {
   text-align: center;
 
-  & > h1 {
+  &>h1 {
     font-weight: var(--font-title-weight);
     font-size: var(--font-title);
     line-height: var(--line-height);
@@ -323,6 +325,7 @@ footer {
   .list-items {
     animation: none;
   }
+
   .index-container {
     li {
       animation: none;
