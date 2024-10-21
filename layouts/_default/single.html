@@ -1,12 +1,16 @@
-{{ define "main" }} {{ partial "article-labels.html" . }}
+{{ define "main" }}
+{{ partial "single_partials/labels.html" . }}
 <main>
   <article>
     <div class="article-header">
       <h1>{{.Title}}</h1>
-      {{ partial "article-head-data.html" . }}
+      {{ partial "single_partials/data.html" . }}
     </div>
     <div class="article-content">{{.Content}}</div>
   </article>
 </main>
-{{ partial "article-related" . }}
-<div class="article-license">{{partial "article-license" . }} </div>{{ end }}
+{{ partial "single_partials/related.html" . }}
+<div class="article-license">
+  {{partial "single_partials/license.html" . }}
+</div>
+{{ end }}

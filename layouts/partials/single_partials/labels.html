@@ -1,0 +1,12 @@
+<div class="article-labels">
+  {{ with .Params.categories }}
+  <div class="categories">
+    <p> <a href="/categories">Categories: </a>{{ range . }} <a href="/categories/{{- . | lower }}">{{- . }}</a> {{ end
+      }} </p>
+  </div>
+  {{ end }} {{ with .Params.tags}}
+  <div class="tags">
+    <p> <a href="/tags">Tags: </a> {{ range . }} <a href="/tags/{{- . | lower }}">{{- . }}</a> {{ end }} </p>
+  </div>
+  {{ end }}
+</div>
