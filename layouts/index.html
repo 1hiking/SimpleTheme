@@ -1,23 +1,27 @@
 {{ define "main" }}
 
-<main>
-  <div class="article-header">
+<div class="index_flex">
+  <main>
     <h1>{{- .Title }}</h1>
-  </div>
-  <div class="article-content"> {{- .Content }} </div>
-</main>
+    <div class="main_content">
+      {{- .Content }}
+    </div>
+  </main>
 
-<div class="index-container">
-  <nav>
-    <p>Latest Posts:</p>
-    <ul>
-      {{ range first 5 ( where .Site.RegularPages "Type" "in" site.Params.mainSections )}}
-      <li>
-        <a href="{{- .Permalink }}">{{- .Title}}</a>
-        <p>{{- .Description }}</p>
-      </li>
-      {{ end }}
-    </ul>
-  </nav>
+  <div class="latest_articles">
+    <nav>
+      <p>Blogs</p>
+      <ul>
+        {{ range first 5 ( where .Site.RegularPages "Type" "in" site.Params.mainSections )}}
+        <li>
+          <a href="{{- .Permalink }}">
+            <h2>{{- .Title}}</h2>
+            <p>{{- .Description }}</p>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
 </div>
 {{ end }}

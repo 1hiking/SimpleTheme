@@ -4,11 +4,13 @@
   <h1>{{.Title}}</h1>
   {{ .Content }}
 
-  <div class="list-items">
+  <div class="list_items">
     {{range.Pages}}
     <article>
-      <a href="{{.RelPermalink}}"> {{.Title}}</a>
-      <p>{{ .Description }}</p>
+      <a href="{{.RelPermalink}}">
+        <h1> {{.Title}}</h1>
+        <p>{{ .Description }}</p>
+      </a>
     </article>
     {{end}}
   </div>

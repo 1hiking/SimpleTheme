@@ -1,10 +1,11 @@
-<div class="header-nav">
-  <header>
-    <a href="/">
-      <img src="{{- .Site.Params.logo | safeHTML }}" alt="{{- .Site.Params.logoalt }}" width="50" height="50" />
-      <h1>{{- .Site.Title }}</h1>
-    </a>
-  </header>
-
-  <nav>{{- partial "header_nav.html" . -}}</nav>
-</div>
+<header>
+  <a href="/" class="header_logo">
+    <img src="{{- .Site.Params.logo | safeHTML }}" alt="{{- .Site.Params.logoalt }}" width="50" height="50" />
+    <h1>{{- .Site.Title }}</h1>
+  </a>
+  <nav>
+    {{ range .Site.Menus.main.ByWeight}} {{ .Pre }}
+    <a href="{{- .URL }}" title="{{- .Title }}">{{- .Name -}}</a>
+    {{ .Post }} {{ end }}
+  </nav>
+</header>
